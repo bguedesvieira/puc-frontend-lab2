@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
     <title>Laboratório 1</title>
 </head>
 <body>
@@ -13,44 +15,54 @@
       <div class="container">
         <h1>Laborat&oacute;rio 1</h1>
         <p>Bacon ipsum dolor amet excepteur pig proident picanha, jerky id ut mollit. Boudin chuck est leberkas quis ut lorem burgdoggen aliqua corned beef pastrami chicken. Laborum eiusmod landjaeger flank doner pancetta ullamco officia deserunt hamburger dolore ham salami biltong. Pancetta bresaola shoulder quis burgdoggen.</p>
-        <p><a class="btn btn-primary btn-lg" href="#album" role="button">Novo álbum</a></p>
+        <p><a hrf="#album" class="btn btn-primary btn-lg" >Novo álbum</a>
       </div>
     </div>   
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <form>
-                    <div class="input-group">
-                        <span class="input-group-btn">
-                            <a href="/album.html" class="btn btn-primary" type="button">
-                                Novo álbum
-                            </a>
-                        </span>
-                        <input class="form-control" placeholder="filtrar pelo título do álbum"/>
-                    </div>
-                </form>
-            </div>
-        </div> 
+        
 
-        <div class="row">
-            <div class="col-md-4">
-                <h2>Título álbum 1</h2>
-                <p>Mussum Ipsum, cacilds vidis litro abertis. Paisis, filhis, espiritis santis. Copo furadis é disculpa de bebadis, arcu quam euismod magna. Diuretics paradis num copo é motivis de denguis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! </p>
-                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div>
-            <div class="col-md-4">
-                <h2>Título álbum 2</h2>
-                <p>Silvio Santos Ipsum um, dois três, quatro, PIM, entendeuam? Ma! Ao adquirir o carnê do Baú, você estará concorrendo a um prêmio de cem mil reaisam. Ma vai pra lá. Ma você, topa ou não topamm. Ma o Silvio Santos Ipsum é muitoam interesanteam. Com ele ma você vai gerar textuans ha haae. Boca sujuam... sem vergonhuamm. Qual é a musicamm? É por sua conta e riscoamm? Você veio da caravana de ondeammm? Ma tem ou não tem o celular do milhãouamm? Wellintaaammmmmmmmm. </p>
-                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div>
-            <div class="col-md-4">
-                <h2>Título álbum 3</h2>
-                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div>
+        <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
-        <hr>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="http://lorempixel.com/500/500/people/" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block" src="http://lorempixel.com/500/500/nightlife/" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="http://lorempixel.com/500/500/nature/" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
 
         <footer>
             <p>Bernardo Guedes Vieira, 2017</p>
@@ -59,5 +71,16 @@
 
     <div id="album">
     </div>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="asset/js/jquery/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="asset/js/bootstrap/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
