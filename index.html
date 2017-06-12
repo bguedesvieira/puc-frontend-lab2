@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,80 +8,184 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="asset/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="asset/css/vendor/baguetteBox.min.css" rel="stylesheet">
     <title>Laboratório 1</title>
 </head>
+
 <body>
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Laborat&oacute;rio 1</h1>
-        <p>Bacon ipsum dolor amet excepteur pig proident picanha, jerky id ut mollit. Boudin chuck est leberkas quis ut lorem burgdoggen aliqua corned beef pastrami chicken. Laborum eiusmod landjaeger flank doner pancetta ullamco officia deserunt hamburger dolore ham salami biltong. Pancetta bresaola shoulder quis burgdoggen.</p>
-        <p><a hrf="#album" class="btn btn-primary btn-lg" >Novo álbum</a>
-      </div>
-    </div>   
+    <div id="topo" class="jumbotron">
+        <div class="container">
+            <h1>Laborat&oacute;rio 1</h1>
+            <p>Bacon ipsum dolor amet excepteur pig proident picanha, jerky id ut mollit. Boudin chuck est leberkas quis ut
+                lorem burgdoggen aliqua corned beef pastrami chicken. Laborum eiusmod landjaeger flank doner pancetta ullamco
+                officia deserunt hamburger dolore ham salami biltong. Pancetta bresaola shoulder quis burgdoggen.</p>
+            <p><a href="#novo-album" class="btn btn-primary btn-lg">Novo álbum</a>
+        </div>
+    </div>
 
     <div class="container">
-        
 
-        <!-- START THE FEATURETTES -->
 
-      <hr class="featurette-divider">
+        <!-- INÍCIO LISTA DOS ALBUNS -->
 
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <hr class="featurette-divider">
+
+        <div id="albuns" class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent
+                    commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            </div>
+            <div class="col-md-5">
+                <a href="#album">
+                <img class="featurette-image img-responsive center-block" alt="Álbum de pessoas..." src="http://lorempixel.com/500/500/people/">
+            </a>
+            </div>
         </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" src="http://lorempixel.com/500/500/people/" alt="Generic placeholder image">
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 col-md-push-5">
+                <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent
+                    commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            </div>
+            <div class="col-md-5 col-md-pull-7">
+                <a href="#album">
+                <img class="featurette-image img-responsive center-block" alt="Álbum de vida noturna..." src="http://lorempixel.com/500/500/nightlife/" >
+            </a>
+            </div>
         </div>
-      </div>
 
-      <hr class="featurette-divider">
+        <hr class="featurette-divider">
 
-      <div class="row featurette">
-        <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent
+                    commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            </div>
+            <div class="col-md-5">
+                <a href="#album">
+              <img class="featurette-image img-responsive center-block" alt="Álbum de Natureza..." src="http://lorempixel.com/500/500/nature">
+          </a>
+            </div>
         </div>
-        <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" src="http://lorempixel.com/500/500/nightlife/" alt="Generic placeholder image">
-        </div>
-      </div>
 
-      <hr class="featurette-divider">
+        <hr class="featurette-ending">
 
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" src="http://lorempixel.com/500/500/nature/" alt="Generic placeholder image">
-        </div>
-      </div>
+        <!-- /FIM LISTA DOS ALBUNS -->
 
-      <hr class="featurette-divider">
-
-      <!-- /END THE FEATURETTES -->
-
-        <footer>
-            <p>Bernardo Guedes Vieira, 2017</p>
-        </footer>
     </div>
 
+    <!-- COMPONENTE DE CRIACAO DE NOVO ALBUM -->
+    <div id="novo-album">
+        <div class="container">
+            <h2 class="titulo-pagina">Novo Álbum</h2>
+            <div class="col-md-6">
+                <form id="novo-album-form">
+                    <div class="form-group">
+                        <label>Título</label>
+                        <input name="titulo" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Descrição</label>
+                        <textarea name="descricao" rows="6" class="form-control form-control-area" required>
+                    </textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Url foto Capa</label>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                            <button class="btn btn-primary" onclick="Laboratorio1.atualizaFotoCapa();">
+                                Atualizar foto
+                            </button>
+                        </span>
+                            <input id="foto-capa" class="form-control" placeholder="Url da foto de capa do álbum" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" ng-disabled="formulario.$invalid">
+                    Salvar
+                </button>
+                    <a href="#topo" class="btn btn-primary">Voltar</a>
+                </form>
+                <hr>
+            </div>
+            <div class="col-md-6">
+                <img id="img-capa" class="img-responsive center-block" data-src="holder.js/500x400/auto" alt="{{titulo}}">
+            </div>
+        </div>
+        <hr>
+    </div>
+    <!-- /FIM COMPONENTE DE CRIACAO DE NOVO ALBUM -->
+
+    <!-- COMPONENTE DE EXIBICAO DAS FOTOS DOS ALBUNS -->
     <div id="album">
+        <div class="container">
+            <form>
+            <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                            <button class="btn btn-primary">
+                                Pesquisar foto
+                            </button>
+                        </span>
+                            <input id="pesquisar-foto" class="form-control" placeholder="filtrar fotos">
+                        </div>
+                    </div>
+            </form>
+            <div id="album-pessoas" class="galeria">
+                <a href="http://lorempixel.com/500/500/people/7/">
+                    <img src="http://lorempixel.com/200/200/people/7/" alt="Pessoas"/>
+                </a>
+                <a href="http://lorempixel.com/500/500/people/1/">
+                    <img src="http://lorempixel.com/200/200/people/1/" alt="Pessoas">
+                </a>
+                <a href="http://lorempixel.com/500/500/people/2/">
+                    <img src="http://lorempixel.com/200/200/people/2/" alt="Pessoas">
+                </a>
+                <a href="http://lorempixel.com/500/500/people/3/">
+                    <img src="http://lorempixel.com/200/200/people/3/" alt="Pessoas">
+                </a>
+                <a href="http://lorempixel.com/500/500/people/4/">
+                    <img src="http://lorempixel.com/200/200/people/4/" alt="Pessoas">
+                </a>
+                <a href="http://lorempixel.com/500/500/people/5/">
+                    <img src="http://lorempixel.com/200/200/people/5/" alt="Pessoas">
+                </a>
+                <a href="http://lorempixel.com/500/500/people/6/">
+                    <img src="http://lorempixel.com/200/200/people/6/" alt="Pessoas">
+                </a>
+            </div>
+        </div>
     </div>
 
+    <footer>
+        <p>Bernardo Guedes Vieira, 2017</p>
+    </footer>
 
+    <!-- /FIMM COMPONENTE DE EXIBICAO DAS FOTOS DOS ALBUNS -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Placed at the end of the document so the pages load faster 
+    -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="asset/js/jquery/jquery.min.js"><\/script>')</script>
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="asset/js/jquery/jquery.min.js"><\/script>')
+    </script>
+    <script src="asset/js/bootstrap/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="asset/js/bootstrap/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- baguetejs -->
+    <script src="asset/js/vendor/baguetteBox.min.js"></script>
+    <!-- holder.js -->
+    <script src="asset/js/vendor/holder.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
+
 </html>

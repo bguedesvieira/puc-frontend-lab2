@@ -11,3 +11,14 @@
   line-height: 1;
   letter-spacing: -1px;
 }
+
+.featurette-ending {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.form-control-area{
+    font-family: Garamond,verda ;
+    font-size: 12pt;
+}
