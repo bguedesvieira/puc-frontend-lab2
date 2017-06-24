@@ -29,3 +29,5 @@ baguetteBox.run('.galeria',{
     buttons: true,
     filter: elementFilter
 });
+
+$('#btn-atualiza-foto-capa').click(function(){Laboratorio1.atualizaFotoCapa()});
