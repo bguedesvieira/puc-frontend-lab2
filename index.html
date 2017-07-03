@@ -10,13 +10,13 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="asset/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
     <link href="asset/css/vendor/baguetteBox.min.css" rel="stylesheet">
-    <title>Laboratório 1</title>
+    <title>Laboratório 2</title>
 </head>
 
 <body>
     <div id="topo" class="jumbotron">
         <div class="container">
-            <h1>Laborat&oacute;rio 1</h1>
+            <h1>Laborat&oacute;rio 2</h1>
             <p>Bacon ipsum dolor amet excepteur pig proident picanha, jerky id ut mollit. Boudin chuck est leberkas quis ut
                 lorem burgdoggen aliqua corned beef pastrami chicken. Laborum eiusmod landjaeger flank doner pancetta ullamco
                 officia deserunt hamburger dolore ham salami biltong. Pancetta bresaola shoulder quis burgdoggen.</p>
@@ -24,14 +24,14 @@
         </div>
     </div>
 
-    <div class="container">
+    <div id="albuns" class="container">
 
 
         <!-- INÍCIO LISTA DOS ALBUNS -->
 
         <hr class="featurette-divider">
 
-        <div id="albuns" class="row featurette">
+        <div class="row featurette">
             <div class="col-md-7">
                 <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
                 <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent
@@ -88,12 +88,12 @@
                 <form id="novo-album-form">
                     <div class="form-group">
                         <label>Título</label>
-                        <input name="titulo" class="form-control" required>
+                        <input id="titulo" name="titulo" class="form-control" required>
                     </div>
 
                     <div class="form-group">
                         <label>Descrição</label>
-                        <textarea name="descricao" rows="6" class="form-control form-control-area" required>
+                        <textarea id="descricao" name="descricao" rows="6" class="form-control form-control-area" required>
                     </textarea>
                     </div>
                     <div class="form-group">
@@ -107,9 +107,9 @@
                             <input id="foto-capa" class="form-control" placeholder="Url da foto de capa do álbum" required>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary" ng-disabled="formulario.$invalid">
-                    Salvar
-                </button>
+                    <a id="btn-salvar-album" class="btn btn-primary">
+                        Salvar
+                    </a>
                     <a href="#topo" class="btn btn-primary">Voltar</a>
                 </form>
                 <hr>
@@ -124,14 +124,16 @@
 
     <!-- COMPONENTE DE EXIBICAO DAS FOTOS DOS ALBUNS -->
     <div id="album">
+        
         <div class="container">
             <form>
             <div class="form-group">
                         <div class="input-group">
                             <span class="input-group-btn">
-                            <button class="btn btn-primary">
+                            <a id="btn-pesquisar-foto" class="btn btn-primary">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                                 Pesquisar foto
-                            </button>
+                            </a>
                         </span>
                             <input id="pesquisar-foto" class="form-control" placeholder="filtrar fotos">
                         </div>
@@ -163,6 +165,24 @@
         </div>
     </div>
 
+    <!-- Detail template -->
+    <div class="detail-template modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">x</button>
+            <h3 class="lead"></h3>
+
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="renderServerSideInstructions()">Use this item</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer>
         <p>Bernardo Guedes Vieira, 2017</p>
     </footer>
@@ -185,6 +205,7 @@
     <script src="asset/js/vendor/baguetteBox.min.js"></script>
     <!-- holder.js -->
     <script src="asset/js/vendor/holder.min.js"></script>
+    <script src="js/shutterstock-api.js"></script>
     <script src="js/app.js"></script>
 </body>
 

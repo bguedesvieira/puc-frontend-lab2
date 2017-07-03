@@ -16,5 +16,14 @@
   "dependencies": {
     "baguettebox.js": "^1.8.2",
     "bootstrap": "^3.3.7"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bguedesvieira/puc-frontend-lab2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bguedesvieira/puc-frontend-lab2/issues"
+  },
+  "homepage": "https://github.com/bguedesvieira/puc-frontend-lab2#readme"
 }

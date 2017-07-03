@@ -22,3 +22,26 @@
     font-family: Garamond,verda ;
     font-size: 12pt;
 }
+
+div.image-float-wrapper {
+        padding-bottom: 10px;
+        padding-right: 10px;
+        float: left;
+        text-align: center;
+      }
+.vertical-image {
+        min-height: 170px;
+      }
+
+      .horizontal-image {
+        min-height: 160px;
+      }
+ /* Details area */
+
+div.detail-template .modal-body div {
+  text-align: center;
+}
+
+div.detail-template img, div.detail-template video {
+  width: 100%;
+}
