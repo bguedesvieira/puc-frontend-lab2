@@ -2,6 +2,7 @@ var ShutterstockApi = function($){
     var clientId = '11f959a4264134dc2776';
     var clientSecret = '0f2c4b5327ae69999e6f8382072745bc753cd357';
     var API_URL = 'https://api.shutterstock.com/v2';
+    var SHUTTERSTOCK_COOKIE_NAME='ST_TOKEN';
 
     var _encodeAuthorization = function() {
 
@@ -115,7 +116,51 @@ var ShutterstockApi = function($){
         return wrapper;
     };
 
+    var _securityCallback = function(status,data){
+      console.log(status);
+      console.log(data);
+
+      var dataPost = {
+        "client_id":clientId,
+        "client_secret":clientSecret,
+        "grant_type":'authorization_code',
+        "code":data.code,
+      }
+
+      var jqxhr = $.ajax({
+          type: 'POST',
+          url: API_URL + '/oauth/access_token',
+          data: dataPost,          
+        }).done(function(data){
+          createCookie(SHUTTERSTOCK_COOKIE_NAME,data.access_token,(1/24));
+        });
+    };
+
+    var _authenticate = function(){
+      var auth = new ShutterstockOAuth({
+        client_id: clientId,
+        scope: "user.email user.address",
+        redirect_endpoint: "/lab2",
+        success:  function(data) { _securityCallback("success", data); },
+        failure:  function(data) { _securityCallback("failure", data); },
+        complete: function(data) { _securityCallback("complete", data); }
+      });
+      
+      auth.authorize();
+    };
+
+    var _securityValidate = function(){
+        var cookie = readCookie(SHUTTERSTOCK_COOKIE_NAME);
+
+        if (!cookie){
+          _authenticate();
+        }
+    }
+
     var _search = function(){
+
+        _securityValidate();
+
         $('#album-pessoas').empty();
          var $container = $('#album-pessoas');
         var query = $('#pesquisar-foto').val();
@@ -127,14 +172,19 @@ var ShutterstockApi = function($){
 
         var mediaType = 'image';
 
-        var authorization = _encodeAuthorization();
-        if (!authorization) return;
+        //var authorization = _encodeAuthorization();
+        //if (!authorization) return;
+
+        var cookie = readCookie(SHUTTERSTOCK_COOKIE_NAME);
+        if (!cookie) return;
 
         var jqxhr = $.ajax({
           url: API_URL + '/' + mediaType + 's/search',
           data: opts,
           headers: {
-            Authorization: authorization
+            //Authorization: authorization
+            //ACCESS_TOKEN: cookie
+            Authorization:  "Bearer " + cookie
           }
         })
         .done(function(data) {
